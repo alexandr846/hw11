@@ -9,17 +9,19 @@ public class Main {
     }
 
     public static void printIsLeapYear(int year) {
+        System.out.println();
         System.out.println("Задача-1");
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(year + " год - високосный год");
         } else {
-            System.out.println(year + " - не является високосным");
+            System.out.println(year + " - не является високосным,%n");
         }
 
     }
 
 
     public static void printValidTypeInfo(int type, int year) {
+        System.out.println();
         System.out.println("Задача-2");
         int currentYear = LocalDate.now().getYear();
         String resultType;
@@ -28,12 +30,12 @@ public class Main {
             resultType = "IOS";
         } else
             resultType = "Android";
-            if (year > currentYear) {
-                resultStatus = "облегченную";
-            } else {
-                resultStatus = "";
-            }
-            System.out.printf("Требуется установить %s версию приложения %s", resultStatus,resultType);
+        if (year > currentYear) {
+            resultStatus = "облегченную";
+        } else {
+            resultStatus = "";
+        }
+        System.out.printf("Требуется установить %s версию приложения %s,%n", resultStatus, resultType);
 
 
     }
@@ -47,14 +49,13 @@ public class Main {
         }
         if (distance <= 60) {
             resultDays++;
-            System.out.println("Потребуется дней: "+ resultDays);
+            System.out.println("Потребуется дней: " + resultDays);
         }
         if (distance >= 100) {
             System.out.println("Доставки нет");
             return -1;
         }
         return resultDays;
-
-
     }
+
 }
