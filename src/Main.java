@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         int newYear = 2000;
         printIsLeapYear(newYear);
-        printValidTypeInfo(0, 2024);
+        printValidTypeInfo(1, 2013);
         calculateDeliveryDays(100);
     }
 
@@ -14,7 +14,7 @@ public class Main {
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(year + " год - високосный год");
         } else {
-            System.out.println(year + " - не является високосным,%n");
+            System.out.println(year + " - не является високосным");
         }
 
     }
@@ -26,11 +26,11 @@ public class Main {
         int currentYear = LocalDate.now().getYear();
         String resultType;
         String resultStatus;
-        if (type == 0) {
+        if (type == 1) {
             resultType = "IOS";
         } else
             resultType = "Android";
-        if (year > currentYear) {
+        if (year < currentYear) {
             resultStatus = "облегченную";
         } else {
             resultStatus = "";
@@ -40,22 +40,19 @@ public class Main {
 
     }
 
-    public static int calculateDeliveryDays(int distance) {
+    public static int calculateDeliveryDays(int km) {
         System.out.println();
         System.out.println("Задача-3");
-        int resultDays = 1;
-        if (distance <= 20) {
-            resultDays++;
+        if (km <= 20) {
+            System.out.println("Потребуется дней:1");
+        } else if (km > 20 && km < 60) {
+            System.out.println("Потребуется дней:2");
+        } else if (km >= 60 && km < 100) {
+            System.out.println("Потребуется дней:3");
+        } else if (km >= 100) {
+            System.out.println("доставки нет.");
         }
-        if (distance <= 60) {
-            resultDays++;
-            System.out.println("Потребуется дней: " + resultDays);
-        }
-        if (distance >= 100) {
-            System.out.println("Доставки нет");
-            return -1;
-        }
-        return resultDays;
-    }
 
+        return km;
+    }
 }
