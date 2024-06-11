@@ -4,17 +4,17 @@ public class Main {
     public static void main(String[] args) {
         int newYear = 2000;
         printIsLeapYear(newYear);
-        printValidTypeInfo(1, 2013);
+        printValidTypeInfo(1, 2024);// все работает корректно
         calculateDeliveryDays(100);
     }
 
     public static void printIsLeapYear(int year) {
         System.out.println();
         System.out.println("Задача-1");
-        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-            System.out.println(year + " год - високосный год");
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {// о каком символе идет речь? его сдесь нет
+            System.out.println(year + " год - високосный год");// о каком символе идет речь? его сдесь нет
         } else {
-            System.out.println(year + " - не является високосным");
+            System.out.println(year + " - не является високосным");// о каком символе идет речь? его сдесь нет
         }
 
     }
@@ -35,9 +35,8 @@ public class Main {
         } else {
             resultStatus = "";
         }
-        System.out.printf("Требуется установить %s версию приложения %s,%n", resultStatus, resultType);
-
-
+        System.out.printf("Требуется установить %s версию приложения %s", resultStatus, resultType);// вывод проверил все норм
+        System.out.println();
     }
 
     public static int calculateDeliveryDays(int km) {
@@ -50,9 +49,10 @@ public class Main {
         } else if (km >= 60 && km < 100) {
             System.out.println("Потребуется дней:3");
         } else if (km >= 100) {
-            System.out.println("доставки нет.");
+            System.out.println("доставки нет.");// все корректно
         }
+        System.out.println();
 
         return km;
     }
-}
+}// весь код проверил все работает что нужно еще исправить?
