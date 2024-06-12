@@ -2,7 +2,7 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        int newYear = 2000;
+        int newYear = 1200;
         printIsLeapYear(newYear);
         printValidTypeInfo(1, 2024);// все работает корректно
         calculateDeliveryDays(100);
@@ -35,7 +35,7 @@ public class Main {
         } else {
             resultStatus = "";
         }
-        System.out.printf("Требуется установить %s версию приложения %s", resultStatus, resultType);// вывод проверил все норм
+        System.out.printf("Требуется установить %s версию приложения для %s", resultStatus, resultType);// вывод проверил все норм
         System.out.println();
     }
 
