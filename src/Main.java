@@ -5,7 +5,6 @@ public class Main {
         int newYear = 1200;
         printIsLeapYear(newYear);
         printValidTypeInfo(1, 2024);
-        calculateDeliveryDays(100);
         int resultDays = calculateDeliveryDays(100);
     }
 
